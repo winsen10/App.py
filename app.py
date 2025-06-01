@@ -33,7 +33,7 @@ with tab1:
         st.write(f"🔸 Semen: {semen:.1f} sak")
         st.write(f"🔸 Pasir: {pasir:.2f} m³")
 
-# --- TAB 2: Kalkulator Kubikasi Kayu ---
+# --- TAB 2: Kalkulator Kubikasi Kayu (pakai feet) ---
 with tab2:
     st.subheader("Hitung Kubikasi Kayu (dalam feet)")
 
@@ -43,7 +43,7 @@ with tab2:
     jumlah = st.number_input("Jumlah Batang:", min_value=0, step=1)
 
     if st.button("Hitung Kubikasi"):
-        # 1 ft³ = 0.0283168 m³
         volume_per_batang_m3 = panjang_ft * lebar_ft * tinggi_ft * 0.0283168
         total_volume = volume_per_batang_m3 * jumlah
         st.success(f"📦 Total Kubikasi: {total_volume:.3f} m³")
+        update: ubah satuan ke feet
